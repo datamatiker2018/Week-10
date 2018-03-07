@@ -11,7 +11,7 @@ namespace Example
 
         private static void DisplayNumbers(int iterations)
         {
-            for (int i = 0; i < iterations; i++)
+            for (int i = 1; i < iterations; i++)
             {
                 for (int j = 1; j < i; j++)
                 {
@@ -23,10 +23,11 @@ namespace Example
                     Console.Write(j);
                 }
 
-                Console.Write(Environment.NewLine);
+                Console.WriteLine();
             }
 
-            for (int i = iterations -2; i > 0; i--)
+            // The -2 is needed because it needs one less iteration
+            for (int i = iterations - 2; i > 0; i--)
             {
                 for (int j = 1; j < i; j++)
                 {
@@ -38,7 +39,7 @@ namespace Example
                     Console.Write(j);
                 }
 
-                Console.Write(Environment.NewLine);
+                Console.WriteLine();
             }
         }
     }
